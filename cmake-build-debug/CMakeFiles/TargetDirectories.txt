@@ -1,0 +1,3 @@
+/Users/marcin/CLionProjects/MAZE_PROJECT/cmake-build-debug/CMakeFiles/MAZE_PROJECT.dir
+/Users/marcin/CLionProjects/MAZE_PROJECT/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/marcin/CLionProjects/MAZE_PROJECT/cmake-build-debug/CMakeFiles/rebuild_cache.dir
