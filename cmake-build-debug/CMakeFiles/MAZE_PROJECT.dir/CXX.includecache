@@ -6,25 +6,31 @@
 
 #IncludeRegexTransform: 
 
-/Users/marcin/CLionProjects/MAZE_PROJECT/SFML.cpp
-iostream
--
-SFML/Graphics.hpp
-/Users/marcin/CLionProjects/MAZE_PROJECT/SFML/Graphics.hpp
-/Users/marcin/CLionProjects/maze_solving_project/main.cpp
--
+/Users/marcin/CLionProjects/MAZE_PROJECT/MazeGeneratorSolver.cpp
+header.h
+/Users/marcin/CLionProjects/MAZE_PROJECT/header.h
 
-/Users/marcin/CLionProjects/maze_solving_project/main.cpp
+/Users/marcin/CLionProjects/MAZE_PROJECT/SFML.cpp
+header.h
+/Users/marcin/CLionProjects/MAZE_PROJECT/header.h
+
+/Users/marcin/CLionProjects/MAZE_PROJECT/header.h
 iostream
 -
 vector
--
-cmath
 -
 stack
 -
 random
 -
+SFML/Graphics.hpp
+-
+
+/Users/marcin/CLionProjects/MAZE_PROJECT/main.cpp
+SFML.cpp
+/Users/marcin/CLionProjects/MAZE_PROJECT/SFML.cpp
+MazeGeneratorSolver.cpp
+/Users/marcin/CLionProjects/MAZE_PROJECT/MazeGeneratorSolver.cpp
 
 /usr/local/include/SFML/Config.hpp
 TargetConditionals.h

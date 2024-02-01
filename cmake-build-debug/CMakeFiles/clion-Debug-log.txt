@@ -9,6 +9,6 @@ CMake Deprecation Warning:
 
 
 -- Found SFML 2.6.1 in /usr/local/lib/cmake/SFML
--- Configuring done (0.2s)
--- Generating done (0.1s)
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
 -- Build files have been written to: /Users/marcin/CLionProjects/MAZE_PROJECT/cmake-build-debug

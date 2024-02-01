@@ -78,6 +78,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/marcin/CLionProjects/MAZE_PROJECT/header.h">
+			<Option target="MAZE_PROJECT"/>
+		</Unit>
 		<Unit filename="/Users/marcin/CLionProjects/MAZE_PROJECT/main.cpp">
 			<Option target="MAZE_PROJECT"/>
 		</Unit>

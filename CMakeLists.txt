@@ -3,7 +3,11 @@ project(MAZE_PROJECT)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(MAZE_PROJECT main.cpp)
+add_executable(MAZE_PROJECT main.cpp
+        header.h)
+       #MazeGeneratorSolver.cpp
+        #SFML.cpp)
+
 
 
 find_package(SFML 2.5 COMPONENTS system window graphics network audio REQUIRED)
