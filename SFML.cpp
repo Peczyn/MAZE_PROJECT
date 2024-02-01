@@ -1,32 +1,30 @@
 #include "header.h"
 
+
+//Plik source zawierajacy funkcje dotyczace wyswietlania oraz biblioteki SFML
+
+
 Display::Display()
 {
-//        sf::VideoMode desktopMode = sf::VideoMode::getDesktopMode();
-//        Width = desktopMode.width/2-100;
-//        Height = desktopMode.height/2-100;
-//        window.create(sf::VideoMode(desktopMode.width, desktopMode.height), "Labirynt");
-
     Width=600;
     Height=600;
+
     window.create(sf::VideoMode(Width, Height), "Labirynt");
-
     window.clear();
-
 }
 
 
 void getGridTexture(vector<vector<char>> grid, sf::RenderTexture &renderTexture) {
     renderTexture.clear();
-    for(int f=0; f<grid.size(); f++)
+    for(int col=0; col<grid.size(); col++)
     {
-        for(int g=0; g<grid[0].size(); g++)
+        for(int row=0; row<grid[0].size(); row++)
         {
-            if (grid[f][g] != '@') {
+            if (grid[col][row] != '@') {
 
                 sf::RectangleShape cell(sf::Vector2f(cellSize*cellScale, cellSize*cellScale));
 
-                cell.setPosition(g * cellSize-cellSize/cellScale, f * cellSize-cellSize/cellScale);
+                cell.setPosition(row * cellSize-cellSize/cellScale, col * cellSize-cellSize/cellScale);
                 cell.setFillColor(custom);
 
                 renderTexture.draw(cell);
@@ -35,39 +33,37 @@ void getGridTexture(vector<vector<char>> grid, sf::RenderTexture &renderTexture)
     }
 }
 
-void drawSolution(MazeSolver &y, sf::RenderTexture &renderTexture, float &i ,float &j) {
-    if(!y.moves.empty())
+void drawSolution(MazeSolver &mazeSolution, sf::RenderTexture &renderTexture, float &startingPointHeigth , float &startingPointWidth) {
+
+    if(!mazeSolution.moves.empty()) //Wypisuje tylko ruchy rozwiazania zapisane na stosie moves
     {
-        if(y.moves.top() == 'N')
+        if(mazeSolution.moves.top() == 'N')
         {
-            i++;
+            startingPointHeigth++;
         }
-        else if(y.moves.top() == 'E')
+        else if(mazeSolution.moves.top() == 'E')
         {
-            j--;
+            startingPointWidth--;
         }
-        else if(y.moves.top() == 'S')
+        else if(mazeSolution.moves.top() == 'S')
         {
-            i--;
+            startingPointHeigth--;
         }
-        else if(y.moves.top() == 'W')
+        else if(mazeSolution.moves.top() == 'W')
         {
-            j++;
+            startingPointWidth++;
         }
-        else if(y.moves.top()=='X')
+        else if(mazeSolution.moves.top() == 'X')
         {
-            y.moves.pop();
+            mazeSolution.moves.pop();
             return;
         }
 
-        cell.setPosition((j-2) * cellSize-cellSize/cellScale, (i-2) * cellSize-cellSize/cellScale);
+        cell.setPosition((startingPointWidth - 2) * cellSize - cellSize / cellScale, (startingPointHeigth - 2) * cellSize - cellSize / cellScale);
         cell.setFillColor(custom2);
 
         renderTexture.draw(cell);
 
-
-
-
-        y.moves.pop();
+        mazeSolution.moves.pop();
     }
 }

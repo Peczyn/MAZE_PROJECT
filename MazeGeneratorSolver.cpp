@@ -1,6 +1,22 @@
 #include "header.h"
 
 
+//Plik source zawierajacy funkcje dotyczace tworzenia labirytnu i rozwiazania
+
+
+template<typename T>
+void PrintMatrix(const vector<vector<T>>& matrix)
+{
+    for(auto &a : matrix)
+    {
+        for(auto &b: a) cout << b << ' ';
+        cout << endl;
+    }
+    cout << endl;
+}
+
+
+
 MazeGenerator::MazeGenerator()
 {
 
@@ -250,14 +266,16 @@ bool MazeSolver::GenerateSolutionMatrix() {
     int a = destinationX;
     int b = destinationY;
 
-    while(!moves.empty())
+    stack<char> tempMoves = moves;
+
+    while(!tempMoves.empty())
     {
         Solution[b][a] = 'X';
-        if(moves.top()=='N') b++;
-        else if(moves.top()=='E') a--;
-        else if(moves.top()=='S')b--;
-        else if(moves.top()=='W')a++;
-        moves.pop();
+        if(tempMoves.top()=='N') b++;
+        else if(tempMoves.top()=='E') a--;
+        else if(tempMoves.top()=='S')b--;
+        else if(tempMoves.top()=='W')a++;
+        tempMoves.pop();
     }
     Solution[b][a]= 'X';
     return true;
@@ -267,8 +285,12 @@ bool MazeSolver::GenerateSolutionForMaze() {
 
     CountDistance();
     FindSolutionMoves();
+
+////Jezeli chcemy wyswietlac rozwiazanie i labriynt w terminalu to trzeba odkomentowac nastepne 3 linijki
 //    GenerateSolutionMatrix();
+//    PrintMatrix(matrix);
 //    PrintMatrix(Solution);
+
     return true;
 }
 

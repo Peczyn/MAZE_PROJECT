@@ -99,7 +99,7 @@ std::mt19937 rng(dev());
 std::uniform_int_distribution<std::mt19937::result_type> dist6(1,100);
 
 
-void drawSolution(MazeSolver &y, sf::RenderTexture &renderTexture, float &i ,float &j);
+void drawSolution(MazeSolver &mazeSolution, sf::RenderTexture &renderTexture, float &startingPointHeigth , float &startingPointWidth);
 
 
 #endif //MAZE_PROJECT_HEADER_H
