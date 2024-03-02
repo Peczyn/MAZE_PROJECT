@@ -48,7 +48,3 @@ Contributions to this project are welcome! If you have ideas for new features, i
 
 ### License:
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-Feel free to customize this template to better suit your project. This README provides users with a quick overview of your "Maze Solver with SFML" project, how to run it, interact with it, and contribute to its development.
