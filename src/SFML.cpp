@@ -1,4 +1,4 @@
-#include "header.h"
+#include "../header.h"
 
 
 //Plik source zawierajacy funkcje dotyczace wyswietlania oraz biblioteki SFML

@@ -1,4 +1,4 @@
-#include "header.h"
+#include "../header.h"
 
 
 //Plik source zawierajacy funkcje dotyczace tworzenia labirytnu i rozwiazania
@@ -287,9 +287,9 @@ bool MazeSolver::GenerateSolutionForMaze() {
     FindSolutionMoves();
 
 ////Jezeli chcemy wyswietlac rozwiazanie i labriynt w terminalu to trzeba odkomentowac nastepne 3 linijki
-    GenerateSolutionMatrix();
-    PrintMatrix(matrix);
-    PrintMatrix(Solution);
+//    GenerateSolutionMatrix();
+//    PrintMatrix(matrix);
+//    PrintMatrix(Solution);
 
     return true;
 }
