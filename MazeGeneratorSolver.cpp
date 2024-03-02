@@ -287,9 +287,9 @@ bool MazeSolver::GenerateSolutionForMaze() {
     FindSolutionMoves();
 
 ////Jezeli chcemy wyswietlac rozwiazanie i labriynt w terminalu to trzeba odkomentowac nastepne 3 linijki
-//    GenerateSolutionMatrix();
-//    PrintMatrix(matrix);
-//    PrintMatrix(Solution);
+    GenerateSolutionMatrix();
+    PrintMatrix(matrix);
+    PrintMatrix(Solution);
 
     return true;
 }

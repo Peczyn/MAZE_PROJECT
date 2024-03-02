@@ -33,7 +33,7 @@ int main() {
 
     //CZCZIONKA
     sf::Font font;
-    if (!font.loadFromFile("../fonts/Satoshi-Regular.ttf")) {
+    if (!font.loadFromFile("fonts/Satoshi-Regular.ttf")) {
         std::cerr << "Cannot load font" << std::endl;
         return -1;
     }
