@@ -9,7 +9,7 @@ Display::Display()
     Width=600;
     Height=600;
 
-    window.create(sf::VideoMode(Width, Height), "Labirynt");
+    window.create(sf::VideoMode(Width, Height), "Maze");
     window.clear();
 }
 

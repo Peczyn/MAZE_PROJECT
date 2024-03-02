@@ -1,6 +1,6 @@
-#include "SFML.cpp"
-#include "MazeGeneratorSolver.cpp"
-//#include "header.h"
+#include "src/SFML.cpp"
+#include "src/MazeGeneratorSolver.cpp"
+
 
 using namespace std;
 
